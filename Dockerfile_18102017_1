@@ -1,0 +1,12 @@
+FROM centos:7
+MAINTAINER bhrth.dsra1@gmail.com
+RUN yum install -y \
+    tree \
+    emacs \
+    httpd \
+    traceroute 
+
+ENV var1=ping var2=8.8.8.8
+#CMD $var1 $var2
+VOLUME /data
+ENTRYPOINT ["httpd"]

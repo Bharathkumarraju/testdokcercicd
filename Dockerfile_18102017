@@ -1,0 +1,11 @@
+FROM centos:7
+MAINTAINER bhrth.dsra1@gmail.com
+RUN yum install -y \
+        httpd \
+        vim \
+        emacs \
+        telnet \
+        lynx &&  yum clean all \
+        && rm -rf /tmp/* /var/tmp/*
+EXPOSE 80 
+CMD ["httpd","-D","FOREGROUND"]

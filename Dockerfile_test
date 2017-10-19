@@ -1,0 +1,5 @@
+# Hello world and nginx inside centos
+FROM centos
+MAINTAINER bhrth.dsra1@gmail.com
+RUN yum install -y emacs
+CMD ["echo","Hello World Guys!!! This is centos:7 latest BaseImage version"]
